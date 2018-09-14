@@ -1,0 +1,420 @@
+<!doctype html>
+<html class="no-js" lang=" ">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tenant Harassment Prevention &ndash; NYC Analytics Project Library</title>
+  <meta name="description" content="NYC Analytics" />
+  <meta name="google-site-verification" content="">
+
+  <!-- TODO: Site icons -->
+  <link rel="shortcut icon" href="/assets/img/icons/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/icons/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/icons/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="/assets/img/icons/apple-touch-icon-precomposed.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
+
+  <!-- google analytics -->
+  
+
+  <!-- Style -->
+  <link rel="stylesheet" href="/assets/css/app.css">
+</head>
+<body>
+
+
+<a class="show-on-focus" href="#main">Skip to main content</a>
+<header role="banner" class="site-header">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="cell shrink large-auto">
+        <a class="site-logo montserrat" href="/">
+          <span class="site-logo--LIB">MODA Project Library</span></a>
+        </div>
+
+
+      <div class="cell auto hide-for-large text-right">
+        <button class="responsive-nav-toggler" data-toggle="responsive-menu">Menu</button>
+      </div>
+      <div id="responsive-menu" class="cell large-shrink show-for-large" data-toggler=".show-for-large">
+        <nav role="navigation">
+          <nav >
+  <ul class="menu vertical large-horizontal">
+    
+
+    <div class = "dropdown">
+      
+      <li><a href="/data/">Data</a></li>
+      
+      <div class="dropdown-content">
+      
+        <li><a href="/data">Open Data</a></li>
+      
+      </div>
+    </div>
+
+    
+
+    <div class = "dropdown">
+      
+      <li><a href="/analytics">Analytics</a></li>
+      
+      <div class="dropdown-content">
+      
+        <li><a href="/analytics">Open Source Analytics</a></li>
+      
+        <li><a href="/projects">Project Library</a></li>
+      
+      </div>
+    </div>
+
+    
+
+    <div class = "dropdown">
+      
+      <li><a href="/contact/">Contact</a></li>
+      
+      <div class="dropdown-content">
+      
+      </div>
+    </div>
+
+    
+  </ul>
+</nav>
+
+        </nav>
+      </div>
+      <span class="beta-badge">beta</span>
+    </div>
+
+  </div>
+</header>
+
+
+<div id="main" class="main">
+  <div class="hero">
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="cell">
+          <h1 class="header-large">Tenant Harassment Prevention</h1>
+          <p class="header-xlarge-opaque">MODA helped the Tenant Harassment Prevention Taskforce focus inspection and enforcement resources where risk is highest.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+
+      <div class="cell medium-3">
+        
+        
+        
+        <br>
+          <h6>GitHub repo</h6>
+          <a href="https://github.com/moda-nyc/Project_TenantHarassment.git">moda-nyc/Project_TenantHarassment.git</a>
+        
+        
+      </div>
+
+          <div class="cell medium-9">
+            <h2>Overview</h2>
+
+              
+<p><strong>Finding the worst cases of tenant harassment in NYC</strong>
+In February 2015, the City of New York created a new <a href="https://www1.nyc.gov/site/hpd/renters/thpt.page">Tenant Harassment Prevention Taskforce</a> to protect residents of rent stabilized homes. There are some 1 million rent stabilized units in the city, comprising of <a href="http://furmancenter.org/research/publication/profile-of-rent-stabilized-units-and-tenants-in-new-york-city">almost half of the rental housing stock</a>. With the real estate market booming, city leadership was determined to take action against a small minority of landlords who engaged in predatory and illegal behavior to drive tenants out of their homes.</p>
+
+<p>MODA helped the Taskforce focus inspection and enforcement resources where risk is highest, supporting a data-driven approach to standing up for tenants’ rights.</p>
+
+
+              <hr>
+              <br>
+              <br>
+          </div>
+      </div>
+
+
+
+    <div class="grid-x grid-padding-x">
+      
+      <div class="page-nav cell large-3" data-sticky-container>
+        <div class="sticky" data-sticky data-sticky-on="large" data-top-anchor="page-content:top" data-btm-anchor="page-content:bottom">
+          
+          <ul class="menu vertical" data-magellan>
+            
+            <li><a href="#step-1">I. Scoping</a></li>
+            
+            <li><a href="#step-2">II. Data</a></li>
+            
+            <li><a href="#step-3">III. Analysis</a></li>
+            
+            <li><a href="#step-4">IV. Pilot</a></li>
+            
+            <li><a href="#step-5">V. Handoff</a></li>
+            
+          </ul>
+        </div>
+      </div>
+
+      
+
+
+
+    <!-- this section should be done using a loop but contentblocks don't work with liquid tags -->
+    <div class="cell large-9" id = "page-content">
+
+    
+        <div class="cell large-9" id = "page-content">
+          <h2 id="step-1" data-magellan-target="step-1">I. Scoping</h2>
+          <h6>What is the analytics question?</h6>
+          
+<p>State law defines tenant harassment as a pattern of behavior that disturbs the comfort of rent-stabilized residents with intent to force their departure . Examples cited in court have included landlords shutting off heat and hot water during freezing weather, imposing extreme noise and dust from construction, or creating other unsanitary conditions.</p>
+
+<p>NYC has some of the strongest laws protecting renters in the country. However there is a legal loophole allowing units to become deregulated when tenants leave, if the rent surpasses a threshold. This, along with high market rate rents, sets up a situation where there is clear financial incentive for landlords to force tenants out of their rent regulated apartments.</p>
+
+<p>The Task Force - which comprises city and state agencies including the Department of Housing Preservation and Development (HPD), the Department of Buildings (DOB), the Department of Health and Mental Hygiene (DOHMH), and the Department of Housing and Community Renewal (DHCR) - was charged with sending inspection team to apartments to issue violations where needed. In addition the Attorney General’s office followed up with litigation procedures in cases where the teams saw harassment rising to the level of criminality.</p>
+
+<p>The Taskforce visited units based on recommendations from elected officials and community groups. However they also wanted to add on a wider set of units that these sources may have missed. They turned to MODA to help identify buildings with possible tenant harassment based on information available in city data.</p>
+
+<p>Because there was no city data set of tenant harassment, MODA redefined the analytics question from “What conditions are possible indicators of tenant harassment?” to “What conditions are possible indicators of rent regulated unit loss?”</p>
+
+ <!-- this won't work as a loop, liquid tag isn't readable -->
+        </div>
+        <hr>
+        <br>
+
+    
+
+    
+    <div class="cell large-9" id = "page-content1">
+      <h2 id="step-2" data-magellan-target="step-2">II. Data</h2>
+      <h6> What data is required? </h6>
+          
+<p>Data on rent regulated apartments is not straightforward to obtain. DHCR is the state agency in charge of regulating these units. Unfortunately data could not be aquired directly from DHCR. However, the NYC Department of Finance (DOF) charges a $10 tax on every rent regulated unit. Researcher John Krauss was able to obtain this data from DOF and put them into a <a href="https://github.com/talos/nyc-stabilization-unit-counts">well-documented and useful format</a>. Understanding this data was key to running our analysis.</p>
+
+<p>MODA’s partners suggested several phenomena that may correlate with tenant harassment, such as recently sold buildings, a history of tenant complaints, the presence of sudden bursts of construction activity, illegal construction, landlords taking tenants to court, and the size of the gap between regulated rent and potential market rent.</p>
+
+<p>In addition to the rent stabilization count data from DOF, the team used:
+•HPD Complaints and Violations
+•DOB Complaints and Violations
+•311 Complaints (for all agencies)
+•DOB Construction Permits 
+•DOF Property Sales</p>
+
+ <!-- this won't work as a loop, liquid tag isn't readable -->
+        </div>
+        <hr>
+        <br>
+
+
+    
+    
+
+    <div class="cell large-9" id = "page-content2">
+      <h2 id="step-3" data-magellan-target="step-3">III. Analysis</h2>
+      <h6> What data analysis is applicable?</h6>
+          
+<p>We set out to test which hypothesized housing conditions preceded loss of rent regulated units. First we came up the hypothesized list of predictors based on our discussion with members of the Taskforce.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Predictor</th>
+      <th style="text-align: left">Data Used</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Property Sales</td>
+      <td style="text-align: left">DOF Ownership data – when an owner name is updated</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Construction</td>
+      <td style="text-align: left">DOB Jobs filing, type alt 1-3, on multiple floors</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Illegal Construction</td>
+      <td style="text-align: left">311 Service Requests, DOB Complaints for illegal work</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Complaints from residents</td>
+      <td style="text-align: left">311 Service Requests</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The City’s 311 service offers an extensive store of data about problems or requests for city services originating with residents. Because there are more than two thousand different complaint types under 311, we grouped these into categories related to tenant harassment.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Category</th>
+      <th style="text-align: left">Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Air Quality - NonConstruction</td>
+      <td style="text-align: left">DEP air quality complaints not directly related to construction</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Asbestos</td>
+      <td style="text-align: left">DEP/DOHMH asbestos complaints</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Dust – Construction DEP</td>
+      <td style="text-align: left">Dust from construction (outdoor) routed to DEP</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Dust – Construction DOHMH</td>
+      <td style="text-align: left">Dust from construction (indoor) routed to DOHMH</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Construction</td>
+      <td style="text-align: left">Complaint area containing ‘construction’</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">DOB Illegal Work</td>
+      <td style="text-align: left">DOB complaint containing: illegal, unsafe, safety, or permit</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">DOB</td>
+      <td style="text-align: left">Any other DOB complaint</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Dirty Conditions</td>
+      <td style="text-align: left">Includes DSNY/DOHMH rodent, mold, unsanitary, standing water, vector, sanitation condition, dirty conditions</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">HPD - No Services</td>
+      <td style="text-align: left">HPD Heat/Hot water, electric, gas, refrigerator</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">HPD</td>
+      <td style="text-align: left">Any other HPD complaint</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Hazardous Materials</td>
+      <td style="text-align: left">DEP hazardous materials</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Other</td>
+      <td style="text-align: left">Everything not included in other categories. These are complaints expected to be tangentially related to tenant harassment.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">NA</td>
+      <td style="text-align: left">Not Applicable Agencies:  DOE, TLC, EDC, DCA, DOITT</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>All the predictors shared a unique tax lot ID with the DOF rent stabilized data, so we were able to merge these together and then test for which predictors were more likely to be associated with unit loss.</p>
+
+<p>The Risk Ratio is a comparison of the probability of unit loss in buildings where a predictor was present in the previous year, with the baseline probability of unit loss for all buildings across the city. The findings of this analysis showed which predictors were associated with unit loss. MODA used the risk ratio because it is straightforward to explain and understand. More complicated multivariate analysis may be possible (although limited by the amount of data available), but then we loose the straignforward explainability without gaining much in predictability. The team steered away from overengineering the analysis, especially since the ultimate goal is identifying where tenant harasment is happening while the data  is on unit loss.</p>
+
+<p>The analysis confirmed the importance of key indicators, such as recent sales followed by construction activity, and brought into focus several additional indicators. Buildings with recent asbestos complaints, for example, were five times more likely to experience rent stabilized unit loss compared with the average rent stabilized building.</p>
+
+<p>The details of our approach and analysis can be found here:</p>
+
+<div class="cell large-8" id="page-content">
+<iframe src="https://nbviewer.jupyter.org/github/MODA-NYC/Project_TenantHarassment/blob/master/TestingPredictorsUnitLoss.ipynb" width="100%" height="800" scrolling="yes"></iframe>
+</div>
+
+ <!-- this won't work as a loop, liquid tag isn't readable -->
+        </div>
+        <hr>
+        <br>
+
+
+    
+    
+
+
+
+        <div class="cell large-9" id = "page-content3">
+          <h2 id="step-4" data-magellan-target="step-4">IV. Pilot </h2>
+          <h6>How can the analysis improve the operation?</h6>
+              
+<p>Having identified the predictors associated with unit loss, the team compiled a list of buildings exhibiting one or more of them in the past six months. MODA worked with the the Office of Enforcement and Neighborhood Services at HPD, in charge of selecting addresses for the Task Force. They had previously based most of their inspections on word of mouth recommendations, but also wanted to send the Task Force to other places in that same vicinity. This allowed for more efficient use of the inspectors’ time. They were able to sort the list by neighborhood and send the inspection teams to those addresses.</p>
+
+<p>EVALUATION</p>
+
+<p>MODA received anecdotal evidence that the model was sending the Task Force to places that exhibited potential signs of tenant harassment. In the future, a quantitative assessment would be possible based on results of the inspections (e.g. places were visited, types of violations issued, other follow ups).</p>
+
+ <!-- this won't work as a loop, liquid tag isn't readable -->
+            </div>
+            <hr>
+            <br>
+
+    
+    
+
+            <div class="cell large-9" id = "page-content4">
+              <h2 id="step-5" data-magellan-target="step-5">V. Handoff</h2>
+              <h6>Is the model sustainable?</h6>
+                  
+<p>MODA sends an updated list of buildings to the Taskforce every two to three months.</p>
+
+<h2 id="summary">Summary:</h2>
+<p>Prior to this project, the Tenant Harassment Prevention Taskforce selected addresses for inspections and follow-up actions based on recommendations and professional judgment. The model added value by bringing datasets together to model behavior associated with a carefully defined target variable. The list has helped inspectors, when in a specific neighborhood, select additional addresses to visit. While expert judgment has remained central to countering predatory landlords, the analysis has helped identify key factors that correlate strongly with rent stabilized unit loss, bringing high-risk complaints to the front of the queue for enforcement action.</p>
+
+ <!-- this won't work as a loop, liquid tag isn't readable -->
+                </div>
+                <hr>
+                <br>
+
+    
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<footer role="contentinfo" class="site-footer text-center medium-text-right large-text-left">
+  <div class="grid-container">
+    <nav class="grid-x grid-padding-x grid-padding-y">
+      <div class="cell medium-shrink large-5">
+        <a class="footer-logo media_link" href="http://nyc.gov/analytics"><img alt="NYC MODA" src="/assets/img/NYC Analytics Logo.png"></a>
+      </div>
+      <div class="cell medium-auto large-7">
+        <div class="grid-x grid-padding-x grid-padding-y">
+          <div class="cell medium-auto large-auto">
+            <nav>
+  <ul class="no-bullet">
+    
+      <li><a href="//data/">Data</a></li>
+    
+      <li><a href="//analytics/">Analytics</a></li>
+    
+      <li><a href="//contact/">Contact</a></li>
+    
+  </ul>
+</nav>
+
+          </div>
+          <div class="cell medium-auto large-auto">
+
+          </div>
+          <div class="cell medium-auto large-auto">
+            <h4 class="header-tiny">Find us elsewhere</h4>
+            <ul class="no-bullet">
+              <li><a href="https://github.com/moda-nyc">Github</a></li>
+              <li><a href="mailto:nycanalytics@cityhall.nyc.gov">nycanalytics@cityhall.nyc.gov</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/all.js"></script>
+</body>
+</html>
+
+
+
