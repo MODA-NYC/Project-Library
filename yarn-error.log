@@ -1,14 +1,14 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js start
+  /usr/bin/node /usr/share/yarn/bin/yarn.js install
 
 PATH: 
-  /home/mitsue/.rvm/gems/ruby-2.4.2/bin:/home/mitsue/.rvm/gems/ruby-2.4.2@global/bin:/home/mitsue/.rvm/rubies/ruby-2.4.2/bin:/home/mitsue/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 Yarn version: 
-  1.5.1
+  1.1.0
 
 Node version: 
-  8.11.1
+  8.5.0
 
 Platform: 
   linux x64
@@ -4613,17 +4613,4 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
 
 Trace: 
-  Error: Command failed.
-  Exit code: 1
-  Command: sh
-  Arguments: -c gulp
-  Directory: /home/mitsue/Desktop/MODA_website/moda-nyc
-  Output:
-  
-      at ProcessTermError.MessageError (/usr/share/yarn/lib/cli.js:186:110)
-      at new ProcessTermError (/usr/share/yarn/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/usr/share/yarn/lib/cli.js:30281:17)
-      at emitTwo (events.js:126:13)
-      at ChildProcess.emit (events.js:214:7)
-      at maybeClose (internal/child_process.js:925:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
+  Error: EROFS: read-only file system, symlink '../acorn/bin/acorn' -> '/home/srimmele/Desktop/Share_Documents/labs-planninglabs.nyc/node_modules/@gulp-sourcemaps/identity-map/node_modules/.bin/acorn'
