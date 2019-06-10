@@ -1,0 +1,348 @@
+<!doctype html>
+<html class="no-js" lang=" ">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Predicting Injury Outcomes using Data Linkage &ndash; NYC Analytics Project Library</title>
+  <meta name="description" content="NYC Analytics" />
+  <meta name="google-site-verification" content="">
+
+  <!-- TODO: Site icons -->
+  <link rel="shortcut icon" href="/Project-Library/assets/img/icons/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/Project-Library/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/Project-Library/assets/img/icons/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/Project-Library/assets/img/icons/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="/Project-Library/assets/img/icons/apple-touch-icon-precomposed.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
+
+  <!-- google analytics -->
+  
+
+  <!-- Style -->
+  <link rel="stylesheet" href="/Project-Library/assets/css/app.css">
+</head>
+<body>
+
+
+<a class="show-on-focus" href="#main">Skip to main content</a>
+<header role="banner" class="site-header">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="cell shrink large-auto">
+        <a class="site-logo montserrat" href="/Project-Library/">
+          <span class="site-logo--LIB">MODA Project Library</span></a>
+        </div>
+
+
+      <div class="cell auto hide-for-large text-right">
+        <button class="responsive-nav-toggler" data-toggle="responsive-menu">Menu</button>
+      </div>
+      <div id="responsive-menu" class="cell large-shrink show-for-large" data-toggler=".show-for-large">
+        <nav role="navigation">
+          <nav >
+  <ul class="menu vertical large-horizontal">
+    
+
+    <div class = "dropdown">
+      
+      <li><a href="/Project-Library/data/">Data</a></li>
+      
+      <div class="dropdown-content">
+      
+        <li><a href="/Project-Library/data">Open Data</a></li>
+      
+      </div>
+    </div>
+
+    
+
+    <div class = "dropdown">
+      
+      <li><a href="/Project-Library/analytics">Analytics</a></li>
+      
+      <div class="dropdown-content">
+      
+        <li><a href="/Project-Library/analytics">Open Source Analytics</a></li>
+      
+        <li><a href="/Project-Library/projects">Project Library</a></li>
+      
+      </div>
+    </div>
+
+    
+
+    <div class = "dropdown">
+      
+      <li><a href="/Project-Library/contact/">Contact</a></li>
+      
+      <div class="dropdown-content">
+      
+      </div>
+    </div>
+
+    
+  </ul>
+</nav>
+
+        </nav>
+      </div>
+      <span class="beta-badge">beta</span>
+    </div>
+
+  </div>
+</header>
+
+
+<div id="main" class="main">
+  <div class="hero">
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="cell">
+          <h1 class="header-large">Predicting Injury Outcomes using Data Linkage</h1>
+          <p class="header-xlarge-opaque">Predicting which traffic crashes result in severe injuries helps to prioritize locations for street safety redesign.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+
+      <div class="cell medium-3">
+        
+        
+        
+        <br>
+          <h6>GitHub repo</h6>
+          <a href="https://github.com/moda-nyc/Project_SevereCrashes.git">moda-nyc/Project_SevereCrashes.git</a>
+        
+        
+      </div>
+
+          <div class="cell medium-9">
+            <h2>Overview</h2>
+
+              
+<p>Using linked crash and hospital data we were able to evaluate DOT’s formula for assigning severity to pedestrian crashes.</p>
+
+<p>Our findings confirm that the current formula, which relies on police officer’s reporting of injury, largely tracks with hospital designated injury outcomes. However some improvement is possible. We developed two methods that improve upon the current formula.</p>
+
+<p>In addition we found that the older adults are more vulnerable on city streets Pedestrians over age 70 were 2.5 times more likely to sustain severe injuries than a random pedestrian who is hit by a motor vehicle.</p>
+
+<p>This project was a partnership between MODA, DOT, and DOHMH.</p>
+
+
+              <hr>
+              <br>
+              <br>
+          </div>
+      </div>
+
+
+
+    <div class="grid-x grid-padding-x">
+      
+      <div class="page-nav cell large-3" data-sticky-container>
+        <div class="sticky" data-sticky data-sticky-on="large" data-top-anchor="page-content:top" data-btm-anchor="page-content:bottom">
+          
+          <ul class="menu vertical" data-magellan>
+            
+            <li><a href="#step-1">I. Scoping</a></li>
+            
+            <li><a href="#step-2">II. Data</a></li>
+            
+            <li><a href="#step-3">III. Analysis</a></li>
+            
+            <li><a href="#step-4">IV. Pilot</a></li>
+            
+            <li><a href="#step-5">V. Handoff</a></li>
+            
+          </ul>
+        </div>
+      </div>
+
+      
+
+
+
+    <!-- this section should be done using a loop but contentblocks don't work with liquid tags -->
+    <div class="cell large-9" id = "page-content">
+
+    
+        <div class="cell large-9" id = "page-content">
+          <h2 id="step-1" data-magellan-target="step-1">I. Scoping</h2>
+          <h6>What is the analytics question?</h6>
+          
+<p>Every year in NYC there are over 40 thousand traffic crashes where someone is injured. The vast majority of these injuries are minor. Around 250 crashes are fatal, but many more result in serious injuries, close to death, with potentially long term effects on the injured and their loved ones. Being able to separate out the most severe crashes from the rest allows for the City to have a more focused response on safety interventions, including where to prioritize street safety redesign.</p>
+
+<p>NYC Department of Transportation (DOT) identifies areas with high concentrations of killed or severely injured (KSI) pedestrians as priority geographies for street safety redesign. For instance, “priority corridors” are defined as corridors with the highest KSI per mile over a 5 year time period, where at least 50% of KSI are covered in those areas. Whether or not a new street redesign project is in a priority area is one of the criteria that goes into determining when it gets completed.</p>
+
+<p>Crashes resulting in deaths are relatively straightforward to identify but whether someone has sustained serious injuries is not well defined. Currently DOT uses a formula called KABCO created by NY State Department of Motor Vehicle (DMV). It categorizes people involved in crashes into five categories: K (killed), A (severe injury), B (moderate injury), C (minor injury), and O (no injury). Hence the KABCO name. These KABCO scores are based on three questions from the police crash report on the injured person(s): injury type, injury location, and injury status.</p>
+
+<p><strong>DOT’s current KSI</strong> metric refers to crashes with a K or A score from KABCO. These are crashes where:</p>
+<ul>
+  <li>the reported <strong>injury status</strong> is one of the following:
+    <ul>
+      <li>Death, Unconscious, Semiconscious, Incoherent;</li>
+    </ul>
+  </li>
+  <li>the reported <strong>injury type</strong> is one of the following:
+    <ul>
+      <li>Amputation, Concussion, Internal, Severe Bleeding, Severe/Moderate Burn, Fracture-Dislocation;</li>
+    </ul>
+  </li>
+  <li>Or the <strong>injury location</strong> is
+    <ul>
+      <li>the eye.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>While this formula has been used for some time, there hasn’t been a way to evaluate it or improve on it.</p>
+
+<p><strong>Analytics Question:</strong> How to predict which crashes are severe in order to inform prioritization of street redesign projects?</p>
+
+ <!-- this won't work as a loop, liquid tag isn't readable -->
+        </div>
+        <hr>
+        <br>
+
+    
+
+    
+    <div class="cell large-9" id = "page-content1">
+      <h2 id="step-2" data-magellan-target="step-2">II. Data</h2>
+      <h6> What data is required? </h6>
+          
+<ul>
+  <li>MV104 crash database (crash, vehicle, and person tables)</li>
+  <li>SPARCS hospital data</li>
+</ul>
+
+<p>In 2017 DOHMH linked police crash report data with hospital data. Reference: Conderino, S, Fung, L  et al. “Linkage of traffic crash and hospitalization records with limited identifiers for enhanced public health surveillance” AA&amp;P 2017.</p>
+
+<p>We used this linked data for our analysis. More details on the data can be found in <a href="https://github.com/MODA-NYC/Project_SevereCrashes/blob/master/2-Data/DataDetail.ipynb">DataDetails.ipynb</a> notebook.</p>
+
+<p>More details on the data used can be found here:</p>
+
+<div class="cell large-8" id="page-content">
+<iframe src="https://github.com/MODA-NYC/Project_SevereCrashes/blob/master/2-Data/DataDetail.ipynb" width="100%" height="800" scrolling="yes"></iframe>
+</div>
+
+ <!-- this won't work as a loop, liquid tag isn't readable -->
+        </div>
+        <hr>
+        <br>
+
+
+    
+    
+
+    <div class="cell large-9" id = "page-content2">
+      <h2 id="step-3" data-magellan-target="step-3">III. Analysis</h2>
+      <h6> What data analysis is applicable?</h6>
+          
+<p><img src="/assets/img/projects/SeverityRatio.jpg" alt="Severity Ratio" /></p>
+
+<p>We developed the Severity Ratio to show which crash attributes are more indicative of severe crashes. SR is defined as the probability of an injured person in a crash having severe injuries given a specific crash attribute is present divided by the overall probability of an injured person having severe injuries. For pedestrians and bicyclists around 10% of the injured are severe.</p>
+
+<p>More details can be found here:</p>
+
+<div class="cell large-8" id="page-content">
+<iframe src="https://github.com/MODA-NYC/Project_SevereCrashes/blob/master/3-Analysis/SeverityRatio.ipynb" width="100%" height="800" scrolling="yes"></iframe>
+</div>
+
+<p>In addition, we propose two methods for developing a new KSI formula. The formulas are evaluated using precision and recall metrics, where the ground truth is the hospital outcomes (b-ISS severity).</p>
+
+<p><strong>New KSI formula 1: KABCO Plus</strong>
+This is the most straightforward approach to changing the KABCO formula. In addition to crashes that are ranked K or A in KABCO, we also include other crash attributes that had high SR. These include: head injuries, age 70+, and the other vehicle being a motorcycle or truck. We found that adding in any or all of these categories captures more severe cases, but decreases the percentage of actual severe cases in the labeled or target group.</p>
+
+<p><strong>New KSI formula 2: Scoring system using logistic regression models</strong>
+We used logistic regression to develop a more flexible method allowing us to keep precision constant while improving recall by around 20%.</p>
+
+<p>The simpler formula (KABCO Plus) presents us with a trade off of precision and recall compared to the current formula. A more complicated model can improve on either precision or recall, but the improvement is modest..</p>
+
+<p>More details on these formulas can be found here:</p>
+
+<div class="cell large-8" id="page-content">
+<iframe src="https://github.com/MODA-NYC/Project_SevereCrashes/blob/master/3-Analysis/NewFormulas.ipynb" width="100%" height="800" scrolling="yes"></iframe>
+</div>
+
+ <!-- this won't work as a loop, liquid tag isn't readable -->
+        </div>
+        <hr>
+        <br>
+
+
+    
+    
+
+
+
+        <div class="cell large-9" id = "page-content3">
+          <h2 id="step-4" data-magellan-target="step-4">IV. Pilot </h2>
+          <h6>How can the analysis improve the operation?</h6>
+              
+<p>DOT decided, based on this analysis, the current KABCO system for identifying severe crashes is sound and they will not advocate for the DMV to change it going forward.</p>
+
+<p>Independent of this analysis, DOT has started researching safety engineering standards focused on older adults.</p>
+
+ <!-- this won't work as a loop, liquid tag isn't readable -->
+            </div>
+            <hr>
+            <br>
+
+    
+    
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<footer role="contentinfo" class="site-footer text-center medium-text-right large-text-left">
+  <div class="grid-container">
+    <nav class="grid-x grid-padding-x grid-padding-y">
+      <div class="cell medium-shrink large-5">
+        <a class="footer-logo media_link" href="http://nyc.gov/analytics"><img alt="NYC MODA" src="/Project-Library/assets/img/NYC Analytics Logo.png"></a>
+      </div>
+      <div class="cell medium-auto large-7">
+        <div class="grid-x grid-padding-x grid-padding-y">
+          <div class="cell medium-auto large-auto">
+            <nav>
+  <ul class="no-bullet">
+    
+      <li><a href="/Project-Library//data/">Data</a></li>
+    
+      <li><a href="/Project-Library//analytics/">Analytics</a></li>
+    
+      <li><a href="/Project-Library//contact/">Contact</a></li>
+    
+  </ul>
+</nav>
+
+          </div>
+          <div class="cell medium-auto large-auto">
+
+          </div>
+          <div class="cell medium-auto large-auto">
+            <h4 class="header-tiny">Find us elsewhere</h4>
+            <ul class="no-bullet">
+              <li><a href="https://github.com/moda-nyc">Github</a></li>
+              <li><a href="mailto:nycanalytics@cityhall.nyc.gov">nycanalytics@cityhall.nyc.gov</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<script src="/Project-Library/assets/js/all.js"></script>
+</body>
+</html>
+
+
+
