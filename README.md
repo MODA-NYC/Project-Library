@@ -1,3 +1,12 @@
+# Archive
+
+**This project has been archived and is no longer maintained.** 
+
+The MODA project library is now hosted at https://modaprojects.cityofnewyork.us/
+
+
+The old README:
+
 # MODA Project Library
 
 The Mayor’s Office of Data Analytics partners with New York City agencies to deliver measurable value to City services. The individual steps taken in these partnerships – including what type of analysis was selected and why, insights gained from subject matter experts, and disclaimers on source data – are as important as the results. “Open sourcing” analytics efforts not only increases visibility into the way City agencies use data and develop algorithms, it also helps spread awareness of the power of Open Data and data science in municipal service delivery.
